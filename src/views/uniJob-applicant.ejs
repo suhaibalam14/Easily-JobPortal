@@ -1,0 +1,45 @@
+<div class="container-uniJob mt-5">
+  <div class="image uniJob-left">
+    <img src="/assets/hiring.jpeg" alt="" />
+  </div>
+  <div class="row uniJob-right">
+    <button class="btn btn-success">
+      Hiring Actively <i class="fa-solid fa-chart-line"></i>
+    </button>
+    <div class="col-md-8 offset-md-2 uniJob-detail-padding">
+      <h1><%= job.jobDesignation%></h1>
+      <h3 class="text-muted"><%= job.companyName%></h3>
+
+      <hr />
+
+      <h5>
+        <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp; <%=
+        job.jobLocation%>
+      </h5>
+      <h5>
+        <i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;&nbsp;&nbsp;<%=
+        job.salary%> LPA
+      </h5>
+
+      <h5>
+        <i class="fa-solid fa-calendar-days">&nbsp;&nbsp;</i>Apply by : <%=
+        job.applyBy%>
+      </h5>
+      <h5>
+        <i class="fa-solid fa-hashtag"></i>&nbsp;&nbsp;No of openings : <%=
+        job.numberOfOpenings %>
+      </h5>
+      <hr />
+      <h4>Required skills:</h4>
+      <%job.skillsRequired.split(',').forEach((skill)=>{%>
+      <button class="btn btn-danger"><%=skill%></button>
+      <% })%>
+
+      <hr />
+
+     
+
+      <a href="/getApply/<%= job.id%>" class="btn btn-primary">Apply Now</a>
+    </div>
+  </div>
+</div>

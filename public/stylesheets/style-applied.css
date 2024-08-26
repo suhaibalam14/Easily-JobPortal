@@ -1,0 +1,27 @@
+.container-applied{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.image{
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.applied-a{
+text-align: center;
+}
+.applied-p{
+text-align: center;
+font-size: 30px;
+font-weight: 800;
+color: rgb(100, 98, 98);
+}
+.applied-mail{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: grey;
+  margin-bottom: 15px;
+}

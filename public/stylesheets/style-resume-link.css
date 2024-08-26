@@ -1,0 +1,12 @@
+.resume-link{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(65, 65, 166);
+    padding: 3px 6px 3px 6px;
+    border-radius: 4px;
+}
+.applicant-table{
+    width: 70vw;
+    margin: auto;
+    margin-top: 40px;
+}

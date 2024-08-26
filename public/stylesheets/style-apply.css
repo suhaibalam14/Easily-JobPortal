@@ -1,0 +1,18 @@
+.container-apply {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.left-apply h1 {
+  font-size: 80px;
+  color: grey;
+}
+.left-apply {
+  width: 35vw;
+}
+.right-apply {
+  width: 35vw;
+}

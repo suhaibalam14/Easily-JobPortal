@@ -1,0 +1,55 @@
+<% if(locals.lastVisit){ %>
+<div class="alert alert-light" role="alert">
+  Your last visit: <%=locals.lastVisit%>
+</div>
+<%}%>
+<div class="container-job-list">
+  <%if(jobs.length == 0){ %>
+  <div class="no-job">
+    <h1>
+      You haven't posted any job yet <i class="fa-solid fa-face-sad-tear"></i>
+    </h1>
+    <h2>Start Recruitment now <i class="fa-solid fa-people-group"></i></h2>
+  </div>
+  <% }else{ jobs.forEach((job)=>{%>
+
+  <div class="card">
+    <div class="active-hiring">Actively Hiring!</div>
+    <div class="card-body">
+      <div class="head">
+        <div class="company">
+          <div class="left-company"><%= job.companyName%></div>
+          <div class="right-UD">
+            <a class="updateUpdate" href="/recruiter/getUpdateForm/<%=job.id%>"
+              ><i class="fa-regular fa-pen-to-square"></i
+            ></a>
+            <a class="delDel" href="/recruiter/delete/<%=job.id%>"
+              ><i class="fa-solid fa-trash"></i
+            ></a>
+          </div>
+        </div>
+        <div class="desig"><%= job.jobDesignation%></div>
+      </div>
+      <div class="detail">
+        <div>
+          <i class="fa-solid fa-location-dot"></i> <%= job.jobLocation%>
+        </div>
+        <div>
+          <i class="fa-solid fa-indian-rupee-sign"></i> <%= job.salary%> LPA
+        </div>
+        <div>
+          <i class="fa-solid fa-calendar-days"></i> Apply by : <%= job.applyBy%>
+        </div>
+        <div>
+          <i class="fa-solid fa-hashtag"></i> No of openings : <%=
+          job.numberOfOpenings %>
+        </div>
+        <div>
+          <strong>SkillsRequired : </strong><%= job.skillsRequired.toString() %>
+        </div>
+      </div>
+    </div>
+    <a class="view-btn" href="/jobs/uniJob/<%= job.id%>">View details</a>
+  </div>
+  <%}) }%>
+</div>

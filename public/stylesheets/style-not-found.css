@@ -1,0 +1,13 @@
+.image-cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.image-cover img{
+    width: 300px;
+    border: 2px solid rgb(109, 109, 105);
+    border-radius: 25px;
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.3);
+}

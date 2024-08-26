@@ -1,0 +1,28 @@
+<% if(locals.lastVisit){ %>
+  <div class="alert alert-light" role="alert">
+    Your last visit: <%=locals.lastVisit%>
+  </div>
+  <%}%> 
+<div class="main-container">
+  <h1>Don't Just Find a Job, Find a Place Where You Belong.</h1>
+  <div class="container">
+    <div class="left-container left-container-bg box-index">
+      <div class="box-button">
+
+        <span>
+          <a class="home-link" href="/jobs">I'm a Job Seeker</a>
+        </span>
+          <% if(!locals.userEmail){%>
+        <span>
+          <a class="home-link" href="/recruiter">I'm a Recruiter</a>
+        </span>
+        <% }%>
+      </div>
+    </div>
+    <div class="right-container box">
+      <div class="img">
+        <img src="/assets/funre.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>

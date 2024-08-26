@@ -1,0 +1,36 @@
+.container-uniJob{
+    display: flex;
+}
+.container-uniJob i{
+    color: grey;
+}
+.uniJob-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+.uniJob-right{
+    display: flex;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image img{
+    border-radius: 10px;
+}
+
+.success img{
+    width: 100%;
+}
+
+.uniJob-detail-padding{
+    padding-top: 20px;
+}
+
+.applicant-see{
+    color: rgb(123, 44, 197);
+    
+}

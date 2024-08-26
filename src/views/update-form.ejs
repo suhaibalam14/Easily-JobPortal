@@ -1,0 +1,156 @@
+<div class="container-job-post container-post-new mt-5">
+  <div class="box-new">
+    <div class="post-heading">
+      Update<br />
+      Your<br />
+      Jobs <br />
+      details<br />
+      Here<br />
+    </div>
+    <div class="job-post-form">
+      <%if(updateError){ %>
+      <div class="alert alert-danger" role="alert"><%= updateError %></div>
+      <% } %>
+
+      <form action="/recruiter/postUpdateForm" , method="post">
+
+        <input type="hidden" class="form-control" id="id" name="id" value= <%=job.id%> >
+        <input type="hidden" class="form-control" id="recruiterId" name="recruiterId" value= <%=job.recruiterId%> >
+
+        <div class="form-group">
+          <label for="jobCategory">Category</label>
+          <select class="form-control" id="jobCategory" name="jobCategory">
+            <option value="Technology">Technology</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Finance">Finance</option>
+            <option value="Healthcare">Healthcare</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jobDesignation">Designation</label>
+          <select
+            class="form-control"
+            id="jobDesignation"
+            name="jobDesignation"
+          >
+            <option value="Intern/Trainee">Intern/Trainee</option>
+            <option value="Associate Software Engineer/Developer">
+              Associate Software Engineer/Developer
+            </option>
+            <option value="Software Engineer/Developer">
+              Software Engineer/Developer
+            </option>
+            <option value="Senior Software Engineer/Developer">
+              Senior Software Engineer/Developer
+            </option>
+            <option value="Technical Lead">Technical Lead</option>
+            <option value="Business Analyst">Business Analyst</option>
+            <option value="Quality Assurance (QA) Engineer/Tester">
+              Quality Assurance (QA) Engineer/Tester
+            </option>
+            <option value="Database Administrator (DBA)">
+              Database Administrator (DBA)
+            </option>
+            <option value="System Administrator">System Administrator</option>
+            <option value="DevOps Engineer">DevOps Engineer</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Product Manager">Product Manager</option>
+            <option
+              value="Solutions
+           Architect"
+            >
+              Solutions Architect
+            </option>
+            <option value="Enterprise Architect">Enterprise Architect</option>
+            <option value="Chief Technology Officer (CTO)">
+              Chief Technology Officer (CTO)
+            </option>
+            <option value="Chief Information Officer (CIO)">
+              Chief Information Officer (CIO)
+            </option>
+            <option
+              value="Data
+           Scientist"
+            >
+              Data Scientist
+            </option>
+            <option value="Machine Learning Engineer">
+              Machine Learning Engineer
+            </option>
+            <option
+              value="Security
+           Analyst/Engineer"
+            >
+              Security Analyst/Engineer
+            </option>
+            <option value="UX/UI Designer">UX/UI Designer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="jobLocation">Job Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobLocation"
+            name="jobLocation"
+            value="<%= job.jobLocation%>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="companyName"
+            name="companyName"
+            value="<%= job.companyName%>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary(in LPA)</label>
+          <input
+            type="text"
+            class="form-control"
+            id="salary"
+            name="salary"
+            value="<%= job.salary%>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="skillsRequired">Skills Required</label>
+          <textarea
+            class="form-control"
+            id="skillsRequired"
+            name="skillsRequired"
+            rows="3"
+          >
+<%= job.skillsRequired.toString() %></textarea
+          >
+        </div>
+        <div class="form-group">
+          <label for="numberOfOpenings">Open Positions</label>
+          <input
+            type="number"
+            class="form-control"
+            id="numberOfOpenings"
+            name="numberOfOpenings"
+            value=<%= job.numberOfOpenings%>
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="applyBy">Apply By</label>
+          <input
+            type="date"
+            class="form-control"
+            id="applyBy"
+            name="applyBy"
+            value="<%= job.applyBy%>"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

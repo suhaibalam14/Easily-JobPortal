@@ -1,0 +1,67 @@
+<h1
+  style="
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+    color: rgb(65, 64, 64);
+  "
+>
+  Applying for
+  <span style="text-decoration: underline"><%= job.jobDesignation%></span> @
+  <span style="text-decoration: underline"><%= job.companyName%></span>
+</h1>
+
+<div class="container-apply">
+  <div class="left-apply">
+    <h1>
+      You choose<br />
+      your path,<br />
+      We give you<br />
+      wings<i class="fa-solid fa-face-smile-beam"></i>
+    </h1>
+  </div>
+  <div class="right-apply">
+
+    <%if(error){%>
+      <div class="alert alert-danger" role="alert">
+        <%= error%>
+      </div>
+    <%}%>
+
+    <form method="post" action="/postApply" enctype="multipart/form-data">
+
+      <input type="hidden" class="form-control" id="jobId" name="jobId" value= <%=job.id%> >
+      <input type="hidden" class="form-control" id="recruiterId" name="recruiterId" value= <%=job.recruiterId%> >
+      
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          name="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="number" class="form-label">Contact number</label>
+        <input type="number" class="form-control" id="number" name="contact" />
+      </div>
+      <div class="mb-3">
+        <label for="resumeUrl" class="form-label">Resume</label>
+        <input
+          type="file"
+          class="form-control"
+          id="resumeUrl"
+          name="resumeUrl"
+          accept="*"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

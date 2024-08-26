@@ -1,0 +1,37 @@
+<% if(locals.lastVisit){ %>
+<div class="alert alert-light" role="alert">
+  Your last visit: <%=locals.lastVisit%>
+</div>
+<%}%>
+<div class="container-job-list">
+  <%jobs.forEach((job)=>{%>
+
+  <div class="card">
+    <div class="active active-green">Actively Hiring!</div>
+    <div class="card-body">
+      <div class="head">
+        <div class="company"><%= job.companyName%></div>
+        <div class="desig"><%= job.jobDesignation%></div>
+      </div>
+      <div class="detail">
+        <div><i class="fa-solid fa-location-dot"></i> <%= job.jobLocation%></div>
+        <div>
+          <i class="fa-solid fa-indian-rupee-sign"></i> <%= job.salary%> LPA
+        </div>
+        <div>
+          <i class="fa-solid fa-calendar-days"></i> Apply by : <%= job.applyBy%>
+        </div>
+        <div>
+          <i class="fa-solid fa-hashtag"></i> No of openings : <%=
+          job.numberOfOpenings %>
+        </div>
+        <div>
+          <strong>SkillsRequired : </strong><%= job.skillsRequired.toString() %>
+        </div>
+      </div>
+    </div>
+    <a class="view-btn" href="/jobs/uniJobApplicant/<%= job.id%>">View details</a>
+  </div>
+
+  <%})%>
+</div>

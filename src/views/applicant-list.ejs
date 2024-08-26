@@ -1,0 +1,27 @@
+<h2 style="text-align: center; font-size: 45px; margin-top: 25px">
+  List of applicants for
+  <span style="text-decoration: underline"><%= job.jobDesignation%></span> @
+  <span style="text-decoration: underline"><%= job.companyName%></span>
+</h2>
+<table class="table applicant-table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Resume link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% applicants.forEach((applicant)=>{ %>
+
+    <tr>
+      <td><%= applicant.name%></td>
+      <td><%= applicant.email%></td>
+      <td><%= applicant.contact%></td>
+      <td><a class="resume-link" href="<%= applicant.resumeUrl%>">View</a></td>
+    </tr>
+
+    <% })%>
+  </tbody>
+</table>
