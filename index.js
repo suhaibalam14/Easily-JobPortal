@@ -98,5 +98,5 @@ app.use((req, res) => {
 
 //server listening
 app.listen(4000, () => {
-  console.log("Server is listening @ http://localhost:4000");
+  console.log("Server is listening at http://localhost:4000");
 });
